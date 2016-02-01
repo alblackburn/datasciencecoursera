@@ -1,2 +1,11 @@
-# datasciencecoursera
-Test repo for Data Scientist's Toolbox course
+# What is this experiment about?
+The experiment that is being studied is called "Human Activity Recognition Using Smartphones Dataset". Data was collected by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio  and Luca Oneto. The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
+# Where is the data located?
+The original data was downloaded from this location: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. The data was unzipped into my home directory under my R environment on my desktop under the "data" subfolder. Under the data subfolder, there are files that lay down the activity labels and the features (or variables). Training data is kept under "data/train", and test data is kept under "data/test".
+
+# What does the script do?
+The script "run_analysis.R" loads all training and test data, plus the correlations between the data and activity labels and the subjects that the tests were carried out by. The script aggregates the test and training data into one dataset, including the subject IDs of those who carried out the experiments. It also narrows down the dataset to only those variables concerned with mean or standard deviation, and also renames those variables so that they are more easily understood by those who are not familiar with Human Activity Data. Finally, the script outputs a tidy dataset as "tidyDataSet.txt" in the data directory.
+
+# How is the script used?
+In order to run the script, experimental data must be downloaded to your base R directory under a folder named "data". Sourcing the run_analysis.R script will load the appropriate libraries, parse the data as explained above, and will finish by outputting the final tidy dataset to the "data" directory as "tidyDataSet.txt".
