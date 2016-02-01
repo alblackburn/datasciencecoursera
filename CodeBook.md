@@ -190,4 +190,3 @@
 * The dataset was grouped by subject ID, then by activity, using the group_by() function.
 * These groups were then summarized by mean, using the summarize_each_() function.
 * This final dataset was written to local file using the write.table() function.
-* 
